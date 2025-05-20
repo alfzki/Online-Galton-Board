@@ -1,0 +1,84 @@
+/* Ensure the body and html take full height and width if needed, and manage overflow */
+html,
+body {
+  width: 100%;
+  /* overflow-x: hidden; /* You already have this on body, which is good */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the canvas if its width is less than parent */
+  /* margin: 0; /* Already set above */
+  padding-top: 20px;
+  background-color: #f0f0f0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #333;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+  gap: 10px; /* Adds space between control elements */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Center controls horizontally */
+}
+
+.controls label {
+  font-size: 0.9em;
+}
+
+.controls input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#galtonBoardCanvas {
+  border: 1px solid #333;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 10px; /* Your desired left margin */
+  margin-right: 10px; /* Your desired right margin */
+  max-width: 100%; /* Important: This refers to 100% of parent width */
+  height: auto; /* Maintain aspect ratio based on its width */
+  box-sizing: border-box; /* Crucial for predictable sizing with padding/border */
+  display: block; /* Ensures it behaves like a block, helps with centering if parent is text-align:center */
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #666;
+}

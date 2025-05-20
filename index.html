@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galton Board Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Galton Board Simulation</h1>
+    <div class="controls">
+      <label for="numRows">Number of Rows:</label>
+      <input type="number" id="numRows" value="10" min="2" max="20" />
+      <label for="numBalls">Number of Balls:</label>
+      <input type="number" id="numBalls" value="100" min="10" max="1000" />
+      <label for="binCapacity">Bin Capacity:</label>
+      <input type="number" id="binCapacity" value="25" min="50" max="300" />
+      <button id="startButton">Drop Balls</button>
+      <button id="resetButton">Reset</button>
+    </div>
+    <canvas id="galtonBoardCanvas"></canvas>
+    <footer>
+      &copy; 2025 Alif Zakiansyah As Syauqi. Licensed under the GNU GPL V3.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
